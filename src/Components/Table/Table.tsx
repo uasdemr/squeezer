@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { Links } from "../../const"
-import { useAppDispatch } from "../../hooks/hooks"
-import { offsetStart, setSorting } from "../../store/books-slice"
-import store from "../../store/store"
+import { useAppDispatch } from "../../hooks"
+import { offsetStart, setSorting } from "../../store/squeeze-slice"
 import { TableType } from "../../types/app"
-import { Th } from "../Th/Th"
+import { Th } from "../Th"
 
 const Table = ({ rows, sorting }: TableType) => {
   const [componentRows, setComponentsRows] = useState(rows)
@@ -17,26 +16,26 @@ const Table = ({ rows, sorting }: TableType) => {
     if (sort) {
 
       if (!sorting.sort) {
-        store.dispatch(setSorting({
+        dispatch(setSorting({
           sort: 'asc',
           parametr: sort
         }))
       }
 
       else if (sorting.sort === 'asc' && sorting.parametr === sort) {
-        store.dispatch(setSorting({
+        dispatch(setSorting({
           sort: 'desc',
           parametr: sort
         }))
       }
       else if (sorting.sort === 'desc' && sorting.parametr === sort) {
-        store.dispatch(setSorting({
+        dispatch(setSorting({
           sort: '',
           parametr: ''
         }))
       }
       else {
-        store.dispatch(setSorting({
+        dispatch(setSorting({
           sort: 'asc',
           parametr: sort
         }))

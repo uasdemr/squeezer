@@ -1,8 +1,8 @@
 import { useEffect } from "react"
-import { useAppDispatch, useAppSelector } from "../../hooks/hooks"
+import { useAppDispatch, useAppSelector } from "../../hooks"
 import { statistics } from "../../store/api-action"
 import { RootState } from "../../store/store"
-import { LittlePaginator } from "../LittlePaginator/LittlePaginator"
+import { LittlePaginator } from "../LittlePaginator"
 import { Table } from "../Table"
 
 const Main = () => {

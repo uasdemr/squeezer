@@ -11,7 +11,7 @@ import {
   REGISTER,
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-import squeezerReducer from './books-slice'
+import squeezerReducer from './squeeze-slice'
 
 export const api = createAPI();
 

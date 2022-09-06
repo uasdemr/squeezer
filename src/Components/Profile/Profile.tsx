@@ -1,6 +1,6 @@
 import { useState } from "react"
 import cn from 'classnames'
-import { logOut } from "../../store/books-slice"
+import { logOut } from "../../store/squeeze-slice"
 import store from "../../store/store"
 
 type ProfileProps = {

@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import { useAppSelector } from "../../hooks/hooks"
+import { useAppSelector } from "../../hooks"
 import { RootState } from "../../store/store"
 import { Header } from "../Header/Header"
 import { Spinner } from "../Spinner"

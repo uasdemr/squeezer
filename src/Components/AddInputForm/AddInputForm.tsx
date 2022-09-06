@@ -4,8 +4,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { NewSqueezedLink } from "../../types/app"
 import { squeeze } from "../../store/api-action";
 import { useEffect } from "react";
-import { useAppDispatch } from "../../hooks/hooks";
-import { dropData, dropSorting, offsetStart } from "../../store/books-slice";
+import { useAppDispatch } from "../../hooks";
+import { dropData, dropSorting, offsetStart } from "../../store/squeeze-slice";
 
 const AddInputForm = () => {
 
@@ -57,4 +57,4 @@ const AddInputForm = () => {
   )
 }
 
-export default AddInputForm
+export { AddInputForm }

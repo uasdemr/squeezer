@@ -1,6 +1,6 @@
-import { useAppSelector } from "../../hooks/hooks"
-import { LogIn } from "../LogIn/LogIn"
-import { Profile } from "../Profile/Profile"
+import { useAppSelector } from "../../hooks"
+import { LogIn } from "../LogIn"
+import { Profile } from "../Profile"
 
 const User = () => {
   const user = useAppSelector(state => state.squeezer.user)
@@ -8,8 +8,7 @@ const User = () => {
 
   return (
     <>
-      {!isLogIn && <LogIn />}
-      {isLogIn && <Profile user={user} />}
+      {isLogIn ? <Profile user={user} /> : <LogIn />}
     </>
   )
 }

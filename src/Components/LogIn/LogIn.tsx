@@ -1,12 +1,13 @@
-import store from "../../store/store"
 import { logIn, register } from "../../store/api-action"
 import { useState } from "react"
 import cn from 'classnames'
+import { useAppDispatch } from "../../hooks"
 
 const LogIn = () => {
   const [showDropDown, setShowDropDown] = useState(false)
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const dispatch = useAppDispatch()
 
   const onDropDownBtnClick = (evt: React.MouseEvent<HTMLButtonElement>) => {
     setShowDropDown(!showDropDown)
@@ -21,12 +22,12 @@ const LogIn = () => {
 
   const onLogInButtonHandler = (evt: React.MouseEvent<HTMLButtonElement>) => {
     evt.preventDefault()
-    store.dispatch(logIn({ username, password }))
+    dispatch(logIn({ username, password }))
   }
 
   const onRegistrationButtonHandler = (evt: React.MouseEvent<HTMLButtonElement>) => {
     evt.preventDefault()
-    store.dispatch(register({ username, password }))
+    dispatch(register({ username, password }))
   }
 
   return (

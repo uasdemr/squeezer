@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { useAppSelector } from '../../hooks/hooks';
-import { MainPage } from '../../Pages/MainPage/MainPage';
+import { useAppSelector } from '../../hooks';
+import { MainPage } from '../../Pages/MainPage';
 import { RootState } from '../../store/store';
-import AddInputForm from '../AddInputForm/AddInputForm';
+import { AddInputForm } from '../AddInputForm';
 import { Layout } from '../Layout';
-import PrivateRoute from '../PrivateRouter/PrivateRouter';
+import { PrivateRoute } from '../PrivateRouter';
 import './App.css';
 
 function App() {
@@ -29,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export { App }

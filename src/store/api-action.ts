@@ -5,7 +5,7 @@ import { ErrorType } from "../types/error";
 import { errorHandle } from "../services/error-handle";
 import { successHandle } from "../services/success-handle";
 import { NewSqueezedLink, SqueezeType } from "../types/app";
-import { setIsDataLoadingFalse } from "./books-slice";
+import { setIsDataLoadingFalse } from "./squeeze-slice";
 
 export type LogInPropsType = {
   username: string
